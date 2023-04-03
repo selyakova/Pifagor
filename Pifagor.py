@@ -12,8 +12,8 @@ def calculate():
     digits_counts = [0] * 10
     for digit in row_1 + row_2:
         digits_counts[int(digit)] += 1
-    row1_label.config(text="Первый ряд чисел: " + row_1)
-    row2_label.config(text="Второй ряд чисел: " + row_2)
+    row1_label.config(text="Esimene arvude rida: " + row_1)
+    row2_label.config(text="Teine arvude rida: " + row_2)
     table.delete("1.0", "end")
     for i in range(10):
         row = ""
@@ -26,12 +26,12 @@ root.title("Praktiline töö Numeroloogia Pythagorase ruut")
 #canvas = tk.Canvas(root, bg="#bcebc8")
 #canvas.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
 
-entry_label = tk.Label(root, text="Введите дату рождения в формате DD.MM.YYYY:",bg="#ace8e3",font=("Arial", 20))
-entry_label.grid(row=0, column=0, padx=10, pady=10)
+entry_label = tk.Label(root, text="Sisesta sünniaeg (DD.MM.YYYY) ",bg="#ace8e3",font=("Arial", 20))
+entry_label.grid(row=0, column=0, padx=20, pady=20)
 entry = tk.Entry(root)
-entry.grid(row=0, column=1, padx=10, pady=10)
+entry.grid(row=0, column=1, padx=20, pady=20)
 
-button = tk.Button(root, text="Вычислить", command=calculate, bg="#ace8e3",font=("Arial", 20))
+button = tk.Button(root, text="ENTER", command=calculate, bg="#ace8e3",font=("Arial", 20))
 button.grid(row=1, column=0, padx=5, pady=5)
 
 row1_label = tk.Label(root, text="",font=("Arial", 20))
@@ -39,7 +39,7 @@ row1_label.grid(row=2, column=0, padx=5, pady=5)
 row2_label = tk.Label(root, text="",font=("Arial", 20))
 row2_label.grid(row=3, column=0, padx=5, pady=5)
 
-table_label = tk.Label(root, text="Подсчитав, сколько каких цифр в обоих рядах составляем таблицу:",bg="#ace8e3",font=("Arial", 20))
+table_label = tk.Label(root, text="TULEMUS: ",bg="#ace8e3",font=("Arial", 20))
 table_label.grid(row=4, column=0, padx=5, pady=5)
 table = tk.Text(root, height=10)
 table.grid(row=5, column=0, columnspan=2, padx=5, pady=5)
